@@ -45,8 +45,10 @@ CPU_USAGE=$(ps -o %cpu= -p $PID)
 
 # Verifica se o tempo de execução excedeu o tempo máximo
 if [ $RUNTIME -gt $MAX_RUNTIME ]; then
-  echo "Processo $PROCESS_NAME executando há mais de $MAX_RUNTIME segundos. Reiniciando o processo..."
+  
   if [ "$RESTART" = "true" ]; then
+    echo "Processo $PROCESS_NAME executando há mais de $MAX_RUNTIME segundos. Reiniciando o processo..."
+
     kill $PID
     # Adicione aqui o comando para iniciar o processo novamente
     # Restart the process
@@ -55,10 +57,10 @@ if [ $RUNTIME -gt $MAX_RUNTIME ]; then
         systemctl stop "$PROCESS_NAME"
         systemctl start "$PROCESS_NAME"
     fi
-
+     echo "$(date): Processo $PROCESS_NAME reiniciado após tempo de execução excedido."
   fi
 
-    echo "$(date): Processo $PROCESS_NAME reiniciado após tempo de execução excedido."
+   
 
 else
   # Verifica se o uso de CPU excedeu o limite definido
