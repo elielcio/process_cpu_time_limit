@@ -3,7 +3,7 @@ Este script shell é uma ferramenta simples que monitora o tempo de execução e
 
 ### Instalação
 1. Clone este repositório em sua máquina local:
-   git clone https://github.com/elielcio/process_cpu_time_limit.git /usr/local/scripts/process_cpu_time_limit/
+   git clone https://github.com/elielcio/process_cpu_time_limit.git /usr/local/scripts/
 
 2.Acesse o diretório do repositório:
     cd process_cpu_time_limit
@@ -26,7 +26,7 @@ Por exemplo, para monitorar um processo chamado "meu_processo" com um limite de 
 
 O script também pode ser executado periodicamente usando uma ferramenta de agendamento, como o cron. Por exemplo, para executar o script a cada 5 minutos, adicione a seguinte linha ao arquivo crontab:
 
-*/5 * * * * /usr/local/scripts/process_cpu_time_limit/process_cpu_time_limit.sh -l -r -c 50 -t 600 -p meu_processo >> /var/log/process_cpu_time_limit_seuprocesso.log 2>&1
+*/5 * * * * /usr/local/scripts/process_cpu_time_limit/process_cpu_time_limit.sh -l -r -c 50 -t 600 -p marid >> /var/log/process_cpu_time_limit_seuprocesso.log 2>&1
 
 Este comando executará o script a cada 5 minutos, monitorando o processo "meu_processo" com um limite de uso de CPU de 50% e um tempo máximo de execução de 600 segundos. Ele também enviará a saída para o arquivo /var/log/process_cpu_time_limit_seuprocesso.log para registro.
 
