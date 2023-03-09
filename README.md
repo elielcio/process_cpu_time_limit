@@ -28,7 +28,7 @@ O script também pode ser executado periodicamente usando uma ferramenta de agen
 
 */5 * * * * /usr/local/scripts/process_cpu_time_limit/process_cpu_time_limit.sh -l -r -c 50 -t 600 -p meu_processo >> /var/log/process_cpu_time_limit_seuprocesso.log 2>&1
 
-Este comando executará o script a cada 5 minutos, monitorando o processo "meu_processo" com um limite de uso de CPU de 50% e um tempo máximo de execução de 600 segundos. Ele também enviará a saída para o arquivo /var/log/monitor.log para registro.
+Este comando executará o script a cada 5 minutos, monitorando o processo "meu_processo" com um limite de uso de CPU de 50% e um tempo máximo de execução de 600 segundos. Ele também enviará a saída para o arquivo /var/log/process_cpu_time_limit_seuprocesso.log para registro.
 
 ### Conclusão
 Este script shell é uma ferramenta simples e útil para monitorar e reiniciar automaticamente um processo em um sistema Linux. Ele pode ser facilmente personalizado e integrado a um sistema de agendamento para automatizar o monitoramento de processos críticos.
