@@ -3,7 +3,7 @@ Este script shell é uma ferramenta simples que monitora o tempo de execução e
 
 ### Instalação
 1. Clone este repositório em sua máquina local:
-   git clone https://github.com/elielcio/process_cpu_time_limit.git /usr/local/scripts/
+   git clone https://github.com/elielcio/process_cpu_time_limit.git /usr/local/scripts/process_cpu_time_limit/
 
 2.Acesse o diretório do repositório:
     cd process_cpu_time_limit
